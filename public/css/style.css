@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bg-custom {
+    background: #004966;
+}
+
+body{
+    background: linear-gradient(147deg, #000000 0%, #04619f 95%);
+}
+
+h1{
+    text-align: center;
+    color: whitesmoke;
+}

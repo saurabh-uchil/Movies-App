@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/login.css">
+<body>
+   
+<div class="banner-area">
+    <form class="content-area shadow p-3 mb-5 rounded" method="post" action="/login">
+      <h1 class="text-white text-center">Login</h1>
+      <hr style="border: 1px solid gray;">
+      <div class="content text-white">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" aria-describedby="email" style="width: 300px;" name="email">
+      </div>
+      <div class="content text-white">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" style="width: 300px;" name="password">
+      </div><br>
+      <div class="loginButton text-center">
+      <button type="submit" class="btn btn-info">Login</button>
+    </div>
+    <hr style="border: 1px solid gray;">
+      <div id="create-account">
+        <p>Not a member?<span style="margin-right: 80px;"></span><a href="/register">Create an Account</a><p>
+        <p><span style="margin-right: 95px;"></span><a href="/">Back To Home</a><p>   
+      </div>
+      <!-- Display Errors -->
+      <% if(typeof errors !='undefined'){ %>
+        <% errors.forEach(error=>{ %>
+            <p class="alert alert-danger" id="error"><%= error.message %></p>
+        <% }) %>   
+      <%}%>
+    </form>
+    </div>
+    
+
+</body>
+</html>
