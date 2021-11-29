@@ -19,17 +19,17 @@ app.use(express.static('public'))
 const morgan = require('morgan')
 app.use(morgan('dev'))
 
-//Session config
-// app.use(session({
-//     cookie:{
-//         maxAge: 1000 * 60 * 60 * 24
-//     },
-//     name: "moviesdb",
-//     resave: false,
-//     saveUninitialized: false,
-//     secret: process.env.SESSION_SECRET
 
-// }))
+app.use(session({
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24
+    },
+    name: "moviesdb",
+    resave: false,
+    saveUninitialized: false,
+    secret: process.env.SESSION_SECRET
+
+}))
 
 
 
