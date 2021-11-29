@@ -3,7 +3,7 @@ const app = express()
 const session = require('express-session')
 
 //Port to listen
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 
 //Middleware to parse req.body
 app.use(express.json())
@@ -44,6 +44,6 @@ app.use('/movies',moviesRouter)
 app.use('/login',loginRouter)
 app.use('/register',registerRouter)
 
-app.listen(PORT, ()=>{
-    console.log(`App is running on port ${PORT}`)
+app.listen(PORT, () => {
+    console.log(`App is listening at http://localhost:${PORT}`)
 })
