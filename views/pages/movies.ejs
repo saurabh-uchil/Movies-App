@@ -116,43 +116,46 @@
                 <div class="detailsHead text-white text-center">
                     <h1>MOVIE DETAILS PAGE</h1>
                 </div>
-                
+
                 <div id="moviedetail">
-                <div class="row">
-                    <div class="col-sm-4">
-                      <div class="sub-container">
-                        <div class="sub-sub">
-                            <img id="movieimg" src="" alt="">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="sub-container">
+                                <div class="sub-sub">
+                                    <img id="movieimg" src="" alt="">
+                                </div>
+                            </div>
                         </div>
-                      </div>
+                        <div class="col-sm-8">
+                            <div class="sub-container">
+                                <div class="sub-sub">
+                                    <h2 class="card-title" id="title"></h2>
+                                    <iframe id="trailer" width="560" height="315" src="" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    <p class="card-text" id="overview"></p>
+                                    <h3>Tagline</h3>
+                                    <p id="tagline"></p>
+
+                                    <h3>Genres</h3>
+                                    <div class="cate">
+                                        <span id="genres"></span>
+
+                                    </div>
+
+                                    <h3>Release Date</h3>
+                                    <p id="release_date"></p>
+
+                                    <h3>Runtime</h3>
+                                    <p id="runtime"></p>
+
+                                    <script>const movie_id = <%=  movie_id %>;</script>
+                                    <script src="/js/singlemovie.js"></script>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-8">
-                      <div class="sub-container">
-                        <div class="sub-sub">
-                          <h2 class="card-title" id="title"></h2>
-                          <iframe width="560" height="315" src="https://www.youtube.com/embed/8YjFbMbfXaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <p class="card-text" id="overview"></p>
-                          <h3>Tagline</h3>
-                          <p id="tagline"></p>
-                     
-                          <h3>Genres</h3>
-                          <div class="cate">
-                            <span id="genres"></span>
-                          
-                        </div>
-                     
-                          <h3>Release Date</h3>
-                          <p id="release_date"></p>
-                      
-                          <h3>Runtime</h3>
-                          <p id="runtime"></p>
-                        
-                          <script>const movie_id = <%=  movie_id %>;</script>
-                          <script src="/js/singlemovie.js"></script>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
                 </div>
 
@@ -161,4 +164,3 @@
             </body>
 
 </html>
-    

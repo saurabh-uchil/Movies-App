@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000
 
 //Middleware to parse req.body
 app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }))
 
 //For creating and using views
 app.set('view engine', 'ejs')
@@ -19,19 +19,26 @@ app.use(express.static('public'))
 const morgan = require('morgan')
 app.use(morgan('dev'))
 
+
+//cross origin
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 //Session config
-// app.use(session({
-//     cookie:{
-//         maxAge: 1000 * 60 * 60 * 24
-//     },
-//     name: "moviesdb",
-//     resave: false,
-//     saveUninitialized: false,
-//     secret: process.env.SESSION_SECRET
+app.use(session({
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24
+    },
+    name: "moviesdb",
+    resave: false,
+    saveUninitialized: false,
+    secret: process.env.SESSION_SECRET
 
-// }))
+}))
 
-
+console.log(session)
 
 //Routes
 const homepageRouter = require('./routes/homepage')
@@ -39,10 +46,10 @@ const moviesRouter = require('./routes/movies')
 const loginRouter = require('./routes/login')
 const registerRouter = require('./routes/register')
 
-app.use('/',homepageRouter)
-app.use('/movies',moviesRouter)
-app.use('/login',loginRouter)
-app.use('/register',registerRouter)
+app.use('/', homepageRouter)
+app.use('/movies', moviesRouter)
+app.use('/login', loginRouter)
+app.use('/register', registerRouter)
 
 app.listen(PORT, () => {
     console.log(`App is listening at http://localhost:${PORT}`)
