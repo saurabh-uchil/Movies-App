@@ -127,123 +127,84 @@
                                 </div>
                             </div>
 
-                <div class="row">
-                    <div class="col-sm-4">
-                      <div class="sub-container">
-                        <div class="sub-sub">
-                            <img id="movieimg" src="" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-8">
-                      <div class="sub-container">
-                        <div class="sub-sub">
-                          <h2 class="card-title" id="title"></h2>
-                          <iframe width="560" height="315" src="https://www.youtube.com/embed/8YjFbMbfXaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <p class="card-text" id="overview"></p>
-                          <h3>Tagline</h3>
-                          <p id="tagline"></p>
-                     
-                          <h3>Genres</h3>
-                          <div class="cate">
-                            <span id="genres"></span>
-                          
-                        </div>
-                     
-                          <h3>Release Date</h3>
-                          <p id="release_date"></p>
-                      
-                          <h3>Runtime</h3>
-                          <p id="runtime"></p>
-
-                          <h3>Star Rating</h3>
-                          <div class = "ratingcontainer">  
-                            <!-- fa fa-star is used to create star icon -->
-                            <ul id="stars">
-                                <li class="star" title="Poor" data-value="1">
-                                    <i class = "fa fa-star" aria-hidden = "true" id = "st1"></i> 
-                                </li>
-                                <li class="star" title="Fair" data-value="2">
-                                    <i class = "fa fa-star" aria-hidden = "true" id = "st2"></i> 
-                                </li>
-                                <li class="star" title="Good" data-value="3">
-                                    <i class = "fa fa-star" aria-hidden = "true" id = "st3"></i> 
-                                </li>
-                                <li class="star" title="Excellent" data-value="4">
-                                    <i class = "fa fa-star" aria-hidden = "true" id = "st4"></i> 
-                                </li>
-                                <li class="star" title="Amazing" data-value="5">
-                                    <i class = "fa fa-star" aria-hidden = "true" id = "st5"></i> 
-                                </li>
-                            </ul>  
-                             
-                           </div>  
-                       </div>
-
-                        <div class="col-sm-8">
-                            <div class="sub-container">
-                                <div class="sub-sub">
-                                    <h2 class="card-title" id="title"></h2>
-                                    <iframe id="trailer" width="560" height="315" src="" title="YouTube video player"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p class="card-text" id="overview"></p>
-                                    <h3>Tagline</h3>
-                                    <p id="tagline"></p>
-
-                                    <h3>Genres</h3>
-                                    <div class="cate">
-                                        <span id="genres"></span>
-
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="sub-container">
+                                        <div class="sub-sub">
+                                            <img id="movieimg" src="" alt="">
+                                        </div>
                                     </div>
-
-                                    <h3>Release Date</h3>
-                                    <p id="release_date"></p>
-
-                                    <h3>Runtime</h3>
-                                    <p id="runtime"></p>
-
-                                    <h3>Star Rating</h3>
-                                    <div class="ratingcontainer">
-                                        <!-- fa fa-star is used to create star icon -->
-                                        <ul id="stars ">
-                                            <li class="star" title="Poor" data-value="1">
-                                                <i class="fa fa-star" aria-hidden="true" id="st1"
-                                                    aria-valuetext="1"></i>
-                                            </li>
-                                            <li class="star" title="Fair" data-value="2">
-                                                <i class="fa fa-star" aria-hidden="true" id="st2"></i>
-                                            </li>
-                                            <li class="star" title="Good" data-value="3">
-                                                <i class="fa fa-star" aria-hidden="true" id="st3"></i>
-                                            </li>
-                                            <li class="star" title="Excellent" data-value="4">
-                                                <i class="fa fa-star" aria-hidden="true" id="st4"></i>
-                                            </li>
-                                            <li class="star" title="Amazing" data-value="5">
-                                                <i class="fa fa-star" aria-hidden="true" id="st5"></i>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-
-                                    <script>const movie_id = <%=  movie_id %>;</script>
-                                    <script src="/js/singlemovie.js"></script>
-                                    <script src="/js/starrating.js"></script>
                                 </div>
+                                <div class="col-sm-8">
+                                    <div class="sub-container">
+                                        <div class="sub-sub">
+                                            <h2 class="card-title" id="title"></h2>
+
+                                            <p class="card-text" id="overview"></p>
+                                            <h3>Tagline</h3>
+                                            <p id="tagline"></p>
+
+                                            <h3>Genres</h3>
+                                            <div class="cate">
+                                                <span id="genres"></span>
+
+                                            </div>
+
+                                            <h3>Release Date</h3>
+                                            <p id="release_date"></p>
+
+                                            <h3>Runtime</h3>
+                                            <p id="runtime"></p>
+
+                                            <h3>Star Rating</h3>
+                                            <div class="ratingcontainer">
+                                                <!-- fa fa-star is used to create star icon -->
+                                                <ul id="stars">
+                                                    <li class="star" title="Poor" data-value="1">
+                                                        <i class="fa fa-star" aria-hidden="true" id="st1"></i>
+                                                    </li>
+                                                    <li class="star" title="Fair" data-value="2">
+                                                        <i class="fa fa-star" aria-hidden="true" id="st2"></i>
+                                                    </li>
+                                                    <li class="star" title="Good" data-value="3">
+                                                        <i class="fa fa-star" aria-hidden="true" id="st3"></i>
+                                                    </li>
+                                                    <li class="star" title="Excellent" data-value="4">
+                                                        <i class="fa fa-star" aria-hidden="true" id="st4"></i>
+                                                    </li>
+                                                    <li class="star" title="Amazing" data-value="5">
+                                                        <i class="fa fa-star" aria-hidden="true" id="st5"></i>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-8">
+                                            <div class="sub-container">
+                                                <div class="sub-sub">
+                                                    <h2 class="card-title" id="title"></h2>
+                                                    <iframe id="trailer" width="560" height="315" src=""
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen></iframe>
+
+                                                    <script>const movie_id = <%=  movie_id %>;</script>
+                                                    <script src="/js/singlemovie.js"></script>
+                                                    <script src="/js/starrating.js"></script>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
 
-
-
-                        </div>
-                    </div>
-                </div>
-
-                </div>
-
-                <hr style="margin-bottom: 40px;">
-                <%- include('../partials/footer') %>
+                            <hr style="margin-bottom: 40px;">
+                            <%- include('../partials/footer') %>
             </body>
 
 </html>
