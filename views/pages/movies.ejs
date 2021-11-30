@@ -130,7 +130,12 @@
                       <div class="sub-container">
                         <div class="sub-sub">
                           <h2 class="card-title" id="title"></h2>
-                          <iframe width="560" height="315" src="https://www.youtube.com/embed/8YjFbMbfXaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <!-- <iframe width="560" height="315"id="trailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                          
+                          <video width="560" height="315" id="trailer" controls>
+                            <source src="" type="video/mp4">
+                            Your trailer
+                        </video>
                           <p class="card-text" id="overview"></p>
                           <h3>Tagline</h3>
                           <p id="tagline"></p>
@@ -146,7 +151,8 @@
                       
                           <h3>Runtime</h3>
                           <p id="runtime"></p>
-                        
+
+
                           <script>const movie_id = <%=  movie_id %>;</script>
                           <script src="/js/singlemovie.js"></script>
                         </div>
