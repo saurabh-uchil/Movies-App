@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-
 router.get('/',(req,res)=>{
     if(req.session.userId){
         res.render('pages/homepage',{
@@ -15,5 +14,4 @@ router.get('/',(req,res)=>{
 }
     
 })
-
 module.exports = router

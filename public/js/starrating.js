@@ -31,6 +31,7 @@
               $(stars[i]).addClass('selected');
             }
             var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
+            //when click how many stars
             console.log(ratingValue)
         }); 
 });

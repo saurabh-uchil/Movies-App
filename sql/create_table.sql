@@ -6,15 +6,15 @@ CREATE TABLE IF NOT EXISTS users (
   email VARCHAR(255) NOT NULL,
   password VARCHAR(255) NOT NULL
 );
- 
-DROP TABLE IF EXISTS ratings;
+
+/* DROP TABLE IF EXISTS ratings;
 CREATE TABLE IF NOT EXISTS ratings(
 id SERIAL PRIMARY KEY,
 user_id INTEGER NOT NULL,
 movie_id VARCHAR(60) NOT NULL,
 rating SMALLINT NOT NULL CHECK (rating BETWEEN 1 AND 5),
-CONSTRAINT fk_users FOREIGN KEY(user_id)REFERENCES users(user_id)
-);
+CONSTRAINT fk_usersFOREIGN KEY(user_id)REFERENCES users(id)
+); */
 
 /* Not needed, We only need a ratings table that has rating_id(Auto generated), userid, movieid, rating 
 DROP TABLE IF EXISTS movies;

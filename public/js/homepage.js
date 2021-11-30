@@ -15,6 +15,7 @@ $.getJSON(API_BASE_URL+'/discover/movie',api_options)
         $('.movies').append(html)
         $('.movies').css("margin-left","100px")
     })
+    
 })
 .catch((err)=>{
     console.log(err)
