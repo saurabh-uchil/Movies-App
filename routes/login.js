@@ -76,8 +76,16 @@ router.post('/',(req,res)=>{
             }
             else{
                 req.session.userId = user.user_id
-                /* const name = user.firstname */
-                res.redirect('/')
+                req.session.user = user.fname
+                /* if(!req.session){
+                    console.log("doesnot exist")
+                }else{ */
+                    console.log(req.session)
+                /* } */
+                res.render('pages/homepage',{
+                    title:"Homepage",
+                    session: req.session
+                })
             }
         })
         .catch((err)=>{
