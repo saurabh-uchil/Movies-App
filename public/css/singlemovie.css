@@ -47,6 +47,21 @@
    p{
        font-size: 18px;
    }
+/* Rating CSS
+-------------------------------------------------------------------------------- */
+.fa-star {  
+  font-size : 50px;  
+}
+
+.ratingcontainer ul stars{
+    list-style-type:none;
+    padding:0;
+}
+.ratingcontainer ul > li.star {
+    display:inline-block;    
+}
+  
+
 
    /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
