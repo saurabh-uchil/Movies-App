@@ -82,10 +82,11 @@ router.post('/',(req,res)=>{
                 }else{ */
                     console.log(req.session)
                 /* } */
-                res.render('pages/homepage',{
+                /* res.render('pages/homepage',{
                     title:"Homepage",
                     session: req.session
-                })
+                }) */
+                res.redirect('/')
             }
         })
         .catch((err)=>{
