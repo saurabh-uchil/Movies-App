@@ -20,6 +20,7 @@
        border-radius: 0.25rem;
    }
    
+   
    .sub-sub {
        flex: 1 1 auto;
        padding: 1rem 1rem;
@@ -104,4 +105,15 @@
         font-size: 1.25rem;
         line-height: 1.4; 
     } 
+}
+
+.cate .blue {
+    background-color: #1692bb;
+}
+
+.cate .yell {
+    background-color: #f5b50a;
+}
+.cate .orange {
+    background-color: #ec5a1a;
 }
