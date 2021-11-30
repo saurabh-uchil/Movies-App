@@ -3,11 +3,11 @@ const app = express()
 const session = require('express-session')
 
 //Port to listen
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 
 //Middleware to parse req.body
 app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }))
 
 //For creating and using views
 app.set('view engine', 'ejs')
@@ -19,9 +19,9 @@ app.use(express.static('public'))
 const morgan = require('morgan')
 app.use(morgan('dev'))
 
-//Session config
+
 app.use(session({
-    cookie:{
+    cookie: {
         maxAge: 1000 * 60 * 60 * 24
     },
     name: "moviesdb",
@@ -32,6 +32,8 @@ app.use(session({
 }))
 
 
+
+console.log(session)
 
 //Routes
 const homepageRouter = require('./routes/homepage')
@@ -46,6 +48,6 @@ app.use('/login',loginRouter)
 app.use('/logout',logoutRouter)
 app.use('/register',registerRouter)
 
-app.listen(PORT, ()=>{
-    console.log(`App is running on port ${PORT}`)
+app.listen(PORT, () => {
+    console.log(`App is listening at http://localhost:${PORT}`)
 })
