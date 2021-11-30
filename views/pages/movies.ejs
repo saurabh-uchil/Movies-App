@@ -146,14 +146,38 @@
                       
                           <h3>Runtime</h3>
                           <p id="runtime"></p>
-                        
+
+                          <h3>Star Rating</h3>
+                          <div class = "ratingcontainer">  
+                            <!-- fa fa-star is used to create star icon -->
+                            <ul id="stars">
+                                <li class="star" title="Poor" data-value="1">
+                                    <i class = "fa fa-star" aria-hidden = "true" id = "st1" aria-valuetext="1"></i> 
+                                </li>
+                                <li class="star" title="Fair" data-value="2">
+                                    <i class = "fa fa-star" aria-hidden = "true" id = "st2"></i> 
+                                </li>
+                                <li class="star" title="Good" data-value="3">
+                                    <i class = "fa fa-star" aria-hidden = "true" id = "st3"></i> 
+                                </li>
+                                <li class="star" title="Excellent" data-value="4">
+                                    <i class = "fa fa-star" aria-hidden = "true" id = "st4"></i> 
+                                </li>
+                                <li class="star" title="Amazing" data-value="5">
+                                    <i class = "fa fa-star" aria-hidden = "true" id = "st5"></i> 
+                                </li>
+                            </ul>  
+                             
+                           </div>  
+                        </div>
                           <script>const movie_id = <%=  movie_id %>;</script>
                           <script src="/js/singlemovie.js"></script>
+                          <script src="/js/starrating.js"></script>
                         </div>
                       </div>
                     </div>
                   </div>
-
+                
                 </div>
 
                 <hr style="margin-bottom: 40px;">
