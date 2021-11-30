@@ -20,13 +20,6 @@ const morgan = require('morgan')
 app.use(morgan('dev'))
 
 
-//cross origin
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
-});
-
-//Session config
 app.use(session({
     cookie: {
         maxAge: 1000 * 60 * 60 * 24
@@ -37,6 +30,8 @@ app.use(session({
     secret: process.env.SESSION_SECRET
 
 }))
+
+
 
 console.log(session)
 

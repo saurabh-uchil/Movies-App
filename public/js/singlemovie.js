@@ -29,9 +29,8 @@ $.getJSON(API_BASE_URL + `/movie/${movie_id}/videos`, api_options)
         const video_url = "https://www.youtube.com/embed/"
         $("#trailer").attr({
             src: video_url + first.key
-
         })
-        // $('iframe').attr("src", video_url + first.key)
+
 
 
 
