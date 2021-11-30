@@ -10,7 +10,6 @@ $.getJSON(API_BASE_URL + `/movie/${movie_id}`, api_options)
         $('#tagline').text(movie.tagline)
         $('#runtime').text(movie.runtime + " mins")
         $('#release_date').text(movie.release_date)
-
         $('#overview').append(movie.overview)
         $('#movieimg').attr({
             src: IMAGE_URL + movie.poster_path
@@ -19,7 +18,6 @@ $.getJSON(API_BASE_URL + `/movie/${movie_id}`, api_options)
     .catch((err) => {
         console.log(err)
     })
-
 // /movie/{movie_id}/videos
 $.getJSON(API_BASE_URL + `/movie/${movie_id}/videos`, api_options)
     .then((video) => {
@@ -30,10 +28,6 @@ $.getJSON(API_BASE_URL + `/movie/${movie_id}/videos`, api_options)
         $("#trailer").attr({
             src: video_url + first.key
         })
-
-
-
-
     })
     .catch((err) => {
         console.log(err)
