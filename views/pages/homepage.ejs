@@ -6,7 +6,12 @@
 <body>
     <%- include('../partials/header') %>
     <br>
-    <h1>Welcome to Our Movies App!!</h1>
+    <% if(typeof session !='undefined'){ %>
+    <h1>Welcome to Our Movies App!!<%= session.user %></h1>
+    <%}%>
+    <% if(typeof session =='undefined'){ %>
+        <h1>Welcome to Our Movies App!!</h1>
+    <%}%>
     <br>
     <div class="movies"></div>
     <script src="/js/homepage.js"></script>
