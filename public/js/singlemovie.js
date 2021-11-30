@@ -3,7 +3,6 @@ $.getJSON(API_BASE_URL+`/movie/${movie_id}`,api_options)
 .then((movie)=>{
     console.log(movie)
     movie.genres.forEach((genre)=>{
-
     const moviegenre =  `<span>${genre.name}</span>`
     $('#genres').append(moviegenre+" ")})
     $('#title').text(movie.title)
@@ -48,7 +47,6 @@ $.getJSON(API_BASE_URL + `/movie/${movie_id}`, api_options)
         $('#movieimg').attr({
             src: IMAGE_URL + movie.poster_path
         })
-
     })
     .catch((err) => {
         console.log(err)
@@ -67,4 +65,5 @@ $.getJSON(API_BASE_URL + `/movie/${movie_id}/videos`, api_options)
     })
     .catch((err) => {
         console.log(err)
+    })
     })
