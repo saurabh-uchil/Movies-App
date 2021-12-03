@@ -2,18 +2,25 @@ const express = require('express')
 const db = require('../database')
 const router = express.Router()
 router.get('/:id', (req, res) => {
+
     if (req.session.userId) {
         res.render('pages/movies', {
+
             title: 'Movies Page',
             movie_id: req.params.id,
             session: req.session
         })
+
     } else {
         res.render('pages/movies', {
+
             title: 'Movies Page',
             movie_id: req.params.id
         })
     }
+
+    
+
 })
 
 

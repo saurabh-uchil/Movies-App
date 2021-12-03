@@ -8,8 +8,8 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         </ul>
         <form class="d-flex">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin: 15px;">Search</button>
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchtxtbox">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin: 15px;" id="searchbtn">Search</button>
           <% if(typeof session !='undefined'){ %>
             <button class="btn btn-info"><a class="text-white" href="/logout">Logout</a></button>  
           <%}%>
